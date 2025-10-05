@@ -1,6 +1,7 @@
 ﻿
 using Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib;
 
+
 namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Test
 {
     [TestClass]
@@ -11,19 +12,21 @@ namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Test
         {
             DataService ds = new DataService();
 
-            // Тест для символа '1'
-            char symbol1 = '1';
-            var res1 = ds.GetCharCode(49);
-            Assert.AreEqual("Символ: 1 Код: 49", res1);
+            // Тест для символа '1' - ожидается "49"
+            char symbol = '1';
+            var res = ds.GetCharCode(symbol);
+            Assert.AreEqual("49", res);
+        }
 
-            
+        [TestMethod]
+        public void ExitConditionTest()
+        {
+            DataService ds = new DataService();
 
-            // Тест для точки (сигнал завершения)
-            char symbol3 = '.';
-            var res3 = ds.GetCharCode(symbol3);
-            Assert.AreEqual("exit", res3);
+            // Тест для точки
+            char symbol = '.';
+            var res = ds.GetCharCode(symbol);
+            Assert.AreEqual("exit", res);
         }
     }
 }
-
-

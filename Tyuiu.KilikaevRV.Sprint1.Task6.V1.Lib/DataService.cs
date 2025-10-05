@@ -13,7 +13,7 @@ namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib
             }
 
             int code = (int)symbol;
-            return $"Символ: {symbol} Код: {code}";
+            return code.ToString();
         }
 
         public string? GetCharCode(int v)

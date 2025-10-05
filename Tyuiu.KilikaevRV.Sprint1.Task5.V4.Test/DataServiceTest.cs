@@ -8,7 +8,7 @@ namespace Tyuiu.KilikaevRV.Sprint1.Task5.V4.Test
         public void ValidExpression()
         {
             DataService ds = new DataService();
-            double k = 9869;
+            double k = 13257;
             var res = ds.Calculate(k);
             Assert.AreEqual(3, res);
         }

@@ -23,7 +23,7 @@ namespace Tyuiu.KilikaevRV.Sprint1.Task6.V1
             Console.WriteLine("");
             Console.WriteLine("ИСХОДНЫЕ ДАННЫЕ:");
             Console.WriteLine("********************************************************************************************************");
-            Console.WriteLine("* 10 / (2 + 3                                                                                          *");
+            Console.WriteLine("* 49                                                                                          *");
             Console.WriteLine("* результат                                                                                            *");
 
             Console.ReadKey();

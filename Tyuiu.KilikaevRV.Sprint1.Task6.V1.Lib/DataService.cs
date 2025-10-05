@@ -16,6 +16,11 @@ namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib
             return $"Символ: {symbol} Код: {code}";
         }
 
+        public string? GetCharCode(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         public string SymbolCode(string value)
         {
             throw new NotImplementedException();

@@ -2,26 +2,28 @@
 
 
 
+
+
 namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib
 {
     public class DataService : ISprint1Task6V1
     {
-
         public string SymbolCode(string value)
         {
-            throw new NotImplementedException();
-        }
-    
+            if (string.IsNullOrEmpty(value))
+            {
+                return "Ошибка: пустая строка";
+            }
 
-    public string GetCharCode(char symbol)
-        {
+            char symbol = value[0];
+
             if (symbol == '.')
             {
                 return "exit";
             }
 
             int code = (int)symbol;
-            return code.ToString(); // Возвращаем только код как строку
+            return code.ToString();
         }
     }
 }

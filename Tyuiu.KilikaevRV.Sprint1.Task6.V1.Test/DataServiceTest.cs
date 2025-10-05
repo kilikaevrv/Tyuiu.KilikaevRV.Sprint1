@@ -1,6 +1,6 @@
 ﻿
-using Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib;
 
+using Tyuiu.KilkaevRV.Sprint1.Task6.V1.Lib;
 
 namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Test
 {
@@ -13,8 +13,8 @@ namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Test
             DataService ds = new DataService();
 
             // Тест для символа '1' - ожидается "49"
-            char symbol = '1';
-            var res = ds.GetCharCode(symbol);
+            string value = "1";
+            var res = ds.SymbolCode(value);
             Assert.AreEqual("49", res);
         }
 
@@ -24,9 +24,20 @@ namespace Tyuiu.KilkaevRV.Sprint1.Task6.V1.Test
             DataService ds = new DataService();
 
             // Тест для точки
-            char symbol = '.';
-            var res = ds.GetCharCode(symbol);
+            string value = ".";
+            var res = ds.SymbolCode(value);
             Assert.AreEqual("exit", res);
+        }
+
+        [TestMethod]
+        public void EmptyStringTest()
+        {
+            DataService ds = new DataService();
+
+            // Тест для пустой строки
+            string value = "";
+            var res = ds.SymbolCode(value);
+            Assert.AreEqual("Ошибка: пустая строка", res);
         }
     }
 }
